@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kanban Board</title>
+  <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+
+  <h1>Kanban Board</h1>
+  <button id="reset-btn">Reset Board</button>
+
+  <div class="board">
+    <div class="column" data-status="todo">
+      <h2>Todo</h2>
+      <div class="tasks" id="todo"></div>
+      <input type="text" placeholder="Add task..." onkeydown="addTask(event,'todo')" />
+    </div>
+
+    <div class="column" data-status="doing">
+      <h2>Doing</h2>
+      <div class="tasks" id="doing"></div>
+      <input type="text" placeholder="Add task..." onkeydown="addTask(event,'doing')" />
+    </div>
+
+    <div class="column" data-status="done">
+      <h2>Done</h2>
+      <div class="tasks" id="done"></div>
+      <input type="text" placeholder="Add task..." onkeydown="addTask(event,'done')" />
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
